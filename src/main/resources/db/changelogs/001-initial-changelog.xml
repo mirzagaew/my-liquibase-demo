@@ -1,0 +1,22 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.13.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="madness (generated)" id="1658345576461-1">
+        <createTable tableName="REGIONS" tablespace="USERS">
+            <column autoIncrement="true" defaultOnNull="false" generationType="BY DEFAULT" name="REGION_ID" type="NUMBER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="SYS_C007631"/>
+            </column>
+            <column name="REGION_NAME" type="VARCHAR2(50 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="madness (generated)" id="1658345576461-2">
+        <createTable tableName="TRG_COUNTRY_TABLE" tablespace="USERS">
+            <column autoIncrement="true" defaultOnNull="false" generationType="BY DEFAULT" name="COUNTRY_ID" type="NUMBER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="SYS_C0011757"/>
+            </column>
+            <column name="COUNTRY" type="VARCHAR2(50 BYTE)"/>
+            <column name="COUNTRYCAPITAL" type="VARCHAR2(50 BYTE)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
